@@ -1,3 +1,74 @@
-<h1>
-  {{title}}
-</h1>
+<div class="navbar navbar-inverse bg-inverse">
+  <div class="container d-flex justify-content-between">
+    <a href="#" class="navbar-brand"><app-icon></app-icon> {{title}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</div>
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading"> <app-icon></app-icon> Autosure.me</h1>
+    <p class="lead text-muted">Get your auto insurace quotes in an instant.</p>    
+    <div class="container">
+      <div class="row">
+        <div class="col col-lg-4 col-sm-6 col-xs-6 col-12 ">My car is a 
+          <select name="" id="" class="form-control" (change)=selectYear($event.target.value)>
+            <option></option>
+            <option *ngFor="let year of [1,2,3,4,5,6]"> 201{{year}}</option>
+          </select>
+        </div>
+        <div class="col col-lg-4 col-sm-6 col-12">Make
+          <select name="" id="" class="form-control" (change)=selectMake($event.target.value)>
+            <option [value]=""></option>
+            <option *ngFor="let make of makes" [value]="make.makeId">{{make.car_make}}</option>
+          </select> 
+        </div>
+        <div class="col col-lg-4 col-xs-12 col-12">Model
+          <select name="" id="" class="form-control" (change)=selectModel($event.target.value)>
+            <option></option>
+            <option [value]="model.value" *ngFor="let model of models">{{model.car_model}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12"><p class="lead text-muted">Insured for:</p></div>
+        <div class="col-12"><h2>PHP  {{computedValue.toLocaleString('ph-PH',{currency:'PHP'})}}</h2></div>
+      </div>
+      <div class="row">
+        <div class="col-12"><button (click)=compute class="btn btn-primary btn-lg">Get a quote <app-quote-icon></app-quote-icon></button></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      
+
+      <ul>
+        <li *ngFor="let model of models">
+          {{model.car_model}} - {{model.value.toLocaleString('ph-PH',{currency:'PHP'})}} - {{model.modelId}}
+        </li>
+      </ul>
+
+      Year
+      <select name="" id="" (change)=selectYear($event.target.value)>
+        <option></option>
+        <option *ngFor="let year of [1,2,3,4,5,6]"> 201{{year}}</option>
+      </select> Make
+            <select name="" id="" (change)=selectMake($event.target.value)>
+        <option [value]=""></option>
+        <option *ngFor="let make of makes" [value]="make.makeId">{{make.car_make}}</option>
+      </select> Model
+      <select name="" id="" (change)=selectModel($event.target.value)>
+        <option></option>
+        <option [value]="model.value" *ngFor="let model of models">{{model.car_model}}</option>
+      </select>
+      <div>Insured value:
+        <h2> PHP {{computedValue.toLocaleString('ph-PH',{currency:'PHP'})}}</h2>
+      </div>
+      
+    </div>
+  </div>
+</div>
