@@ -6,12 +6,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { IconComponent } from './icon/icon.component';
 import { QuoteIconComponent } from './quote-icon/quote-icon.component';
+import { MakesComponent } from './makes/makes.component';
+import { ModelsComponent } from './models/models.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IconComponent,
-    QuoteIconComponent
+    QuoteIconComponent,
+    MakesComponent,
+    ModelsComponent
   ],
   imports: [
     BrowserModule,
