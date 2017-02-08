@@ -34,6 +34,7 @@
     "angular-cli": "1.0.0-beta.26",
     "bootstrap": "^3.3.7",
     "codelyzer": "~2.0.0-beta.1",
+    "eslint-config-standard": "^6.2.1",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",

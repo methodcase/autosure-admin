@@ -11,9 +11,9 @@
     <h1 class="jumbotron-heading" class="hidden-xs-down"> <app-icon></app-icon> Autosure.me</h1>
     <p class="lead text-muted hidden-xs-down">Get your auto insurace quotes in an instant.</p>    
     <div class="container">
-      <div class="row">
+      <div class="row"> 
         <div class="col col-lg-4 col-sm-6 col-xs-6 col-12 ">My car is a 
-          <select name="" id="" class="form-control" (change)=selectYear($event.target.value)>
+          <select name="" id="" class="form-control" #selection (change)="selectYear(selection.value)">
             <option></option>
             <option *ngFor="let year of [1,2,3,4,5,6]"> 201{{year}}</option>
           </select>

@@ -20,7 +20,7 @@ export class DataService {
 
   getModels(...args): Observable<Models[]> {
     const [make] = args
-    const data = {where:{makeId:make}}
+    const data = {where:{car_make:make}}
     const where: string = (args.length > 0) ? `?filter=${JSON.stringify(data)}` : ''
     return this.http.get(this.url2.concat(where)).map(x => x.json());
   }

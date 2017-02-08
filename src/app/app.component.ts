@@ -20,7 +20,8 @@ export class AppComponent {
   year: number = 0
   value: number = 0
   computedValue: number = 0
-  
+  btnState:'disabled'
+
   compute(...args) {
     this.data.getCompute(this.year, this.value).subscribe(
       items => this.computedValue = items
@@ -37,8 +38,8 @@ export class AppComponent {
   }
 
   selectModel = (...args) => {
-    const [make] = args
-    this.data.getCompute(this.year, make).subscribe(
+    const [value] = args
+    this.data.getCompute(this.year, value).subscribe(
       items => {
         this.computedValue = items.value
       }
@@ -48,21 +49,11 @@ export class AppComponent {
 
   selectYear(year) {
     this.year = year
+    this.data.getMakes().subscribe( items => this.makes = items )
   }
 
   ngOnInit() {
-    this.data.getMakes().subscribe(
-      items => {
-        this.makes = items
-      }
-    )
-
-    this.data.getModels().subscribe(
-      items => {
-        this.models = items
-      }
-    )
-
+    this.data.getModels().subscribe( items => this.models = items )
   }
 
 }
