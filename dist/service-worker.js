@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/index.html","03ab3d69a17d2fa94dc16b59406803c1"],["/inline.69364c225731c4553503.bundle.js","e72ba7bd57e48722f7e1a5073506933b"],["/main.f5f4c8e2aef6d4d2c996.bundle.js","cf643930a3016912689c3225f88b08ae"],["/styles.3a51d72d222553a74183.bundle.css","3a51d72d222553a7418328f61fd870ae"],["/vendor.70e8d32c362f03af8c11.bundle.js","7704804820ce2f4d128410ca2da2d792"]];
+var precacheConfig = [["/autosure-admin/dist/index.html","03ab3d69a17d2fa94dc16b59406803c1"],["/autosure-admin/dist/inline.69364c225731c4553503.bundle.js","e72ba7bd57e48722f7e1a5073506933b"],["/autosure-admin/dist/main.f5f4c8e2aef6d4d2c996.bundle.js","cf643930a3016912689c3225f88b08ae"],["/autosure-admin/dist/styles.3a51d72d222553a74183.bundle.css","3a51d72d222553a7418328f61fd870ae"],["/autosure-admin/dist/vendor.70e8d32c362f03af8c11.bundle.js","7704804820ce2f4d128410ca2da2d792"]];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 
 
