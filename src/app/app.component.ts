@@ -14,9 +14,9 @@ import 'rxjs/add/operator/map';
 export class AppComponent {
   constructor(private data: DataService) { }
 
-  models = []
-  makes = []  
-  title = 'Autosure.me'
+  models: any = []
+  makes: any = []  
+  title: string = 'Autosure.me'
   year: number = 0
   value: number = 0
   computedValue: number = 0
