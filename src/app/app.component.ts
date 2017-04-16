@@ -55,5 +55,4 @@ export class AppComponent {
   ngOnInit() {
     this.data.getModels().subscribe( items => this.models = items )
   }
-
 }
