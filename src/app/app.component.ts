@@ -19,7 +19,7 @@ export class AppComponent {
   title: string = 'Autosure.me'
   year: number = 0
   value: number = 0
-  computedValue: number = 0
+  computedValue: numberrew = 0
   btnState:'disabled'
 
   compute(...args) {
